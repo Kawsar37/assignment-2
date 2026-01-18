@@ -34,6 +34,7 @@ a {
   border-radius: 10000px;
   font-weight: 500;
   font-size: 16px;
+  cursor: pointer;
 }
 
 /* Main Style */
@@ -61,6 +62,83 @@ nav ul {
   display: none;
 }
 
+.hero h1 {
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+}
+
+.hero p {
+  opacity: 80%;
+  color: white;
+}
+
+.subscribe {
+  border: 1px solid #00ff88;
+  border-radius: 10000px;
+  background-color: transparent;
+  color: #00ff88;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero .btn {
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-content {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 115px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero {
+  background-image: url("../assets/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-circle {
+  position: relative;
+  top: -65px;
+}
+
+.hero-circle img[alt="microphone"] {
+  position: absolute;
+  top: 20%;
+  left: 33%;
+}
+
+.hero-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hero-bottom h1,
+p {
+  text-align: center;
+}
+
+.hero-bottom-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 8px;
+}
+
 /* Responsive */
 @media screen and (max-width: 576px) {
   header ul,
@@ -70,5 +148,24 @@ nav ul {
 
   .menu-icon {
     display: inline;
+  }
+}
+
+/* Animation Style */
+
+.animated-btn {
+  animation-name: button-animation;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes button-animation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(10px);
   }
 }
