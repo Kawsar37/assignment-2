@@ -614,11 +614,24 @@ footer {
   animation-direction: alternate-reverse;
 }
 
+.new {
+  animation: up-down 1s ease-in-out infinite alternate-reverse;
+}
+
 @keyframes button-animation {
   0% {
     transform: translateX(0%);
   }
   100% {
     transform: translateX(10px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(8px);
   }
 }
