@@ -13,7 +13,7 @@
 }
 
 .container {
-  max-width: 75%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -93,32 +93,36 @@ nav ul {
   gap: 8px;
 }
 
-.hero-content {
+/* .hero-content {
   max-width: 550px;
   margin: 0 auto;
   padding: 115px 0;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 8px;
-}
+} */
 
 .hero {
   background-image: url("../assets/hero-bg.png");
   background-size: cover;
   background-position: center;
+  padding: 101px 0;
 }
 
 .hero-circle {
+  max-width: max-content;
+  margin: 0 auto;
   position: relative;
-  top: -65px;
+  margin-bottom: 40px;
 }
 
-.hero-circle img[alt="microphone"] {
+.microphone {
   position: absolute;
+  left: 35%;
   top: 20%;
-  left: 33%;
 }
 
 .hero-bottom {
@@ -139,6 +143,18 @@ p {
   gap: 8px;
 }
 
+.new {
+  background-color: #00ff88;
+  padding: 8px 16px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 1000px;
+  box-shadow: 0px 3px 27px rgba(0, 255, 136, 0.5);
+  position: absolute;
+  top: 12px;
+  right: 24px;
+}
+
 /* Responsive */
 @media screen and (max-width: 576px) {
   header ul,
@@ -146,8 +162,37 @@ p {
     display: none;
   }
 
+  nav {
+    padding: 16px 20px;
+  }
+
   .menu-icon {
     display: inline;
+  }
+
+  .hero {
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 40px 20px;
+    background-position-y: 25%;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .microphone {
+    height: 80px;
+    top: 24%;
+    left: 37%;
+  }
+
+  .circle {
+    width: 200px;
+  }
+
+  .new {
+    right: -16px;
   }
 }
 
